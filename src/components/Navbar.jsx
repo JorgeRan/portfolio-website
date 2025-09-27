@@ -1,53 +1,69 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <section id="navbar">
-      <div class="container">
-        {" "}
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          {" "}
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-          >
-            {" "}
-            <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-            </svg>{" "}
-            <span class="fs-4">Simple header</span>{" "}
-          </a>{" "}
-          <ul class="nav nav-pills">
-            {" "}
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">
-                Home
-              </a>
-            </li>{" "}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Features
-              </a>
-            </li>{" "}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Pricing
-              </a>
-            </li>{" "}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                FAQs
-              </a>
-            </li>{" "}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                About
-              </a>
-            </li>{" "}
-          </ul>{" "}
-        </header>{" "}
+    <motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-soft py-2" : "bg-transparent py-4"
+      }`}
+      initial={{
+        opacity: 0,
+        y: -20,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <motion.div
+          className="text-xl font-bold"
+          whileHover={{
+            scale: 1.05,
+          }}
+        >
+          <span className={scrolled ? "text-primary-blue" : "text-white"}>
+            Portfolio
+          </span>
+        </motion.div>
+        <nav>
+          <ul className="flex space-x-6 my-2">
+            {["About", "Portfolio", "Experience", "Skills", "Contact"].map(
+              (item) => (
+                <motion.li
+                  className="text-lg font-medium"
+                  key={item}
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                >
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className={`transition-colors nav-link ${
+                      scrolled ? "text-neutral-dark" : "text-white"
+                    } hover:text-primary-teal`}
+                  >
+                    {item}
+                  </a>
+                </motion.li>
+              )
+            )}
+          </ul>
+        </nav>
       </div>
-    </section>
+    </motion.header>
   );
 }
 

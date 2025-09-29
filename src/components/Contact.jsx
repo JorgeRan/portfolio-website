@@ -1,70 +1,174 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import React from 'react'
+import { motion } from 'framer-motion'
+import { MailIcon, LinkedinIcon, GithubIcon, PhoneIcon } from 'lucide-react'
+import { Button } from './common/Button'
 export function Contact() {
   return (
-    <section id="contact">
-      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        {" "}
-        <div class="row align-items-center g-lg-5 py-5">
-          {" "}
-          <div class="col-lg-7 text-center text-lg-start">
-            {" "}
-            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
-              Vertically centered hero sign-up form
-            </h1>{" "}
-            <p class="col-lg-10 fs-4">
-              Below is an example form built entirely with Bootstrap’s form
-              controls. Each required form group has a validation state that can
-              be triggered by attempting to submit the form without completing
-              it.
-            </p>{" "}
-          </div>{" "}
-          <div class="col-md-10 mx-auto col-lg-5">
-            {" "}
-            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-              {" "}
-              <div class="form-floating mb-3">
-                {" "}
+    <section id="contact" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          className="text-4xl font-bold text-center mb-16 text-neutral-dark"
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
+          Contact Me
+        </motion.h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="bg-neutral-light p-8 rounded-xl shadow-soft"
+            initial={{
+              opacity: 0,
+              x: -20,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            <h3 className="text-2xl font-bold mb-6 text-primary-blue">
+              Get In Touch
+            </h3>
+            <p className="text-neutral-dark mb-8">
+              I'm currently looking for new opportunities and would love to hear
+              from you. Whether you have a question or just want to say hi, I'll
+              get back to you as soon as possible!
+            </p>
+            <div className="space-y-4">
+              <a
+                href="mailto:jane.doe@example.com"
+                className="flex items-center group"
+              >
+                <div className="p-3 bg-primary-teal/10 rounded-full mr-4 group-hover:bg-primary-teal/20 transition-colors">
+                  <MailIcon className="w-6 h-6 text-primary-teal" />
+                </div>
+                <span className="text-neutral-dark group-hover:text-primary-teal transition-colors">
+                  jane.doe@example.com
+                </span>
+              </a>
+              <a href="tel:+1234567890" className="flex items-center group">
+                <div className="p-3 bg-primary-blue/10 rounded-full mr-4 group-hover:bg-primary-blue/20 transition-colors">
+                  <PhoneIcon className="w-6 h-6 text-primary-blue" />
+                </div>
+                <span className="text-neutral-dark group-hover:text-primary-blue transition-colors">
+                  (123) 456-7890
+                </span>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center group"
+              >
+                <div className="p-3 bg-[#0077B5]/10 rounded-full mr-4 group-hover:bg-[#0077B5]/20 transition-colors">
+                  <LinkedinIcon className="w-6 h-6 text-[#0077B5]" />
+                </div>
+                <span className="text-neutral-dark group-hover:text-[#0077B5] transition-colors">
+                  linkedin.com/in/janedoe
+                </span>
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center group"
+              >
+                <div className="p-3 bg-neutral-dark/10 rounded-full mr-4 group-hover:bg-neutral-dark/20 transition-colors">
+                  <GithubIcon className="w-6 h-6 text-neutral-dark" />
+                </div>
+                <span className="text-neutral-dark group-hover:text-neutral-dark/70 transition-colors">
+                  github.com/janedoe
+                </span>
+              </a>
+            </div>
+          </motion.div>
+          <motion.div
+            className="bg-neutral-light p-8 rounded-xl shadow-soft"
+            initial={{
+              opacity: 0,
+              x: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            <h3 className="text-2xl font-bold mb-6 text-primary-blue">
+              Send a Message
+            </h3>
+            <form className="space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-neutral-dark mb-1"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-neutral-dark mb-1"
+                >
+                  Email
+                </label>
                 <input
                   type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                ></input>{" "}
-                <label for="floatingInput">Email address</label>{" "}
-              </div>{" "}
-              <div class="form-floating mb-3">
-                {" "}
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                ></input>{" "}
-                <label for="floatingPassword">Password</label>{" "}
-              </div>{" "}
-              <div class="checkbox mb-3">
-                {" "}
-                <label>
-                  {" "}
-                  <input type="checkbox" value="remember-me"></input> Remember
-                  me
-                </label>{" "}
-              </div>{" "}
-              <button class="w-100 btn btn-lg btn-primary" type="submit">
-                Sign up
-              </button>{" "}
-              <hr class="my-4"></hr>{" "}
-              <small class="text-body-secondary">
-                By clicking Sign up, you agree to the terms of use.
-              </small>{" "}
-            </form>{" "}
-          </div>{" "}
-        </div>{" "}
+                  id="email"
+                  className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-neutral-dark mb-1"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
+                  placeholder="Your message..."
+                ></textarea>
+              </div>
+              <Button className="w-full">Send Message</Button>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default Contact;

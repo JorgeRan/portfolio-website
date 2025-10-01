@@ -3,44 +3,55 @@ import { motion } from 'framer-motion'
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react'
 export function Portfolio() {
   const projects = [
+    
     {
-      title: 'AI-Powered ECG Analysis',
+      title: 'BioCARE: Biomedical Carleton Applied Research & Engineering Team',
       description:
-        'Developed a machine learning algorithm to detect cardiac abnormalities from ECG signals with 94% accuracy.',
+        'Led electronics design and prototyping at BioCARE, developing biomedical devices that integrate hardware, microcontrollers, and real-time data systems.',
+      image:
+        '/images/BioCARE.png',
+      technologies: ['C++', 'Signal Processing', '3D Printing'],
+      github: 'https://github.com/BioCARE-Software',
+      demo: 'https://carleton-biocare.ca/',
+    },
+    {
+      title: 'NeuroFit',
+      description:
+        'NeuroFit makes fitness personal with muscle-based exercise selection and AI-ready features.',
       image:
         '/images/NeuroFit.svg',
       technologies: ['Python', 'TensorFlow', 'Signal Processing'],
       github: 'https://github.com/JorgeRan/NeuroFit',
-      demo: '#',
+      demo: '',
     },
     {
       title: 'Pump Up!',
       description:
-        'Designed and prototyped a low-power wearable device that tracks vital signs and transmits data wirelessly.',
+        'A fitness app that lets users build personalized workout routines, explore exercise guides, and track progress, all powered by Flutter and Firebase.',
       image: '/images/PumpUp.svg',
 
       technologies: ['Flutter, Firebase, Resful API'],
       github: 'https://github.com/JorgeRan/fitness_app',
-      demo: '#',
+      demo: '',
     },
     {
-      title: 'Medical Imaging Enhancement',
+      title: 'Visited Contries Website',
       description:
-        'Created an algorithm to enhance low-quality medical images using advanced filtering techniques.',
+        'A web app that lets users track and share the countries they’ve visited through a personalized interactive map.',
       image:
-        'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        '/images/visited_contries.png',
       technologies: ['MATLAB', 'Image Processing', 'Deep Learning'],
-      github: '#',
+      github: 'https://github.com/JorgeRan/Visited-Countries',
     },
     {
-      title: 'Prosthetic Hand Control System',
+      title: 'Blog API Project',
       description:
-        'Developed an EMG-based control system for a 3D-printed prosthetic hand with individual finger movement.',
+        'A blogging platform powered by a custom-built API, enabling seamless content creation, management, and display with a modern interface.',
       image:
-        'https://images.unsplash.com/photo-1562752281-974f49e8d366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        '/images/blog_api.png',
       technologies: ['C++', 'Signal Processing', '3D Printing'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/JorgeRan/Blog-API-Project',
+      demo: '',
     },
   ]
   const containerVariants = {
@@ -101,7 +112,7 @@ export function Portfolio() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-soft group"
+              className="bg-white rounded-xl shadow-soft group"
               variants={itemVariants}
             >
               <div className="relative h-64 overflow-hidden">

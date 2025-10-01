@@ -4,9 +4,11 @@ import {
   CodeIcon,
   BrainIcon,
   PencilRulerIcon,
+  DatabaseIcon,
+  MicroscopeIcon,
+  UsersIcon,
   LayoutGrid,
   BarChart3,
-  
   CpuIcon,
 } from "lucide-react";
 import {
@@ -25,110 +27,148 @@ export function Skills() {
 
   const skillCategories = [
     {
-      name: "Programming",
+      name: "Software Development",
       icon: <CodeIcon className="w-6 h-6" />,
       color: "primary-teal",
       skills: [
         {
           name: "Python",
           level: 90,
-          description: "Data analysis, ML algorithms, automation scripts",
+          description:
+            "Data analysis, ML/AI, automation scripts, visualization",
         },
         {
           name: "MATLAB",
           level: 85,
-          description: "Signal processing, data visualization, simulations",
+          description: "Signal processing, simulations, control systems",
         },
         {
           name: "C/C++",
           level: 80,
-          description: "Embedded systems, device drivers, optimization",
+          description: "Embedded programming, device drivers, optimization",
         },
         {
-          name: "JavaScript",
+          name: "JavaScript/TypeScript",
+          level: 80,
+          description: "Full-stack development with React, Next.js, Node.js",
+        },
+        {
+          name: "Java",
           level: 70,
-          description: "Web interfaces, data visualization, interactivity",
+          description: "Object-oriented programming, backend systems",
         },
       ],
     },
     {
-      name: "Hardware",
+      name: "Electronics & Embedded Systems",
       icon: <CpuIcon className="w-6 h-6" />,
       color: "primary-blue",
       skills: [
         {
-          name: "PCB Design",
+          name: "Circuit Design",
           level: 90,
-          description: "Multi-layer boards, analog/digital circuits",
+          description:
+            "Analog/digital circuits, PCB design, soldering, testing",
         },
         {
-          name: "Arduino",
-          level: 95,
-          description: "Rapid prototyping, sensor integration, IoT devices",
-        },
-        {
-          name: "Raspberry Pi",
+          name: "Embedded Systems",
           level: 85,
-          description: "Edge computing, computer vision systems",
+          description: "Arduino, STM32, PLCs, sensors, real-time control",
         },
         {
-          name: "Microcontrollers",
+          name: "FPGA (VHDL/Verilog)",
+          level: 70,
+          description: "Digital logic design, simulation, hardware prototyping",
+        },
+        {
+          name: "Simulation Tools",
           level: 80,
-          description: "ARM, PIC, real-time applications",
+          description:
+            "SPICE, Multisim, ADS, Cadence for RF/mixed-signal design",
         },
       ],
     },
     {
-      name: "AI/ML",
+      name: "Data Science & Engineering",
       icon: <BrainIcon className="w-6 h-6" />,
       color: "accent",
       skills: [
         {
-          name: "TensorFlow",
-          level: 75,
-          description: "Neural networks, computer vision models",
-        },
-        {
-          name: "Signal Processing",
-          level: 85,
-          description: "Biomedical signal analysis, feature extraction",
-        },
-        {
           name: "Data Analysis",
-          level: 80,
-          description: "Statistical analysis, data visualization",
+          level: 85,
+          description: "Pandas, NumPy, SciPy, exploratory data analysis",
         },
         {
-          name: "Computer Vision",
+          name: "Machine Learning",
+          level: 75,
+          description:
+            "Scikit-learn, TensorFlow basics, classification/regression",
+        },
+        {
+          name: "Databases",
           level: 70,
-          description: "Object detection, image segmentation",
+          description: "SQL, PostgreSQL, MongoDB, schema design",
+        },
+        {
+          name: "Cloud Platforms",
+          level: 65,
+          description: "AWS, Azure (data lakes, ETL pipelines, deployment)",
         },
       ],
     },
     {
-      name: "Design Tools",
+      name: "Biomedical & Lab Skills",
+      icon: <MicroscopeIcon className="w-6 h-6" />,
+      color: "magenta",
+      skills: [
+        {
+          name: "Medical Imaging",
+          level: 75,
+          description: "MRI, CT, ultrasound signal processing and analysis",
+        },
+        {
+          name: "Biomedical Devices",
+          level: 80,
+          description:
+            "Electronics for medical applications, real-time monitoring",
+        },
+        {
+          name: "Wet Lab Techniques",
+          level: 70,
+          description: "Sample prep, assays, flow cytometry (familiarity)",
+        },
+        {
+          name: "Technical Documentation",
+          level: 85,
+          description: "Reports, research papers, regulatory compliance notes",
+        },
+      ],
+    },
+    {
+      name: "Collaboration & Tools",
       icon: <PencilRulerIcon className="w-6 h-6" />,
       color: "red",
       skills: [
         {
-          name: "SolidWorks",
-          level: 80,
-          description: "3D modeling, assembly design, simulations",
+          name: "Version Control",
+          level: 90,
+          description: "Git, GitHub, GitLab, CI/CD pipelines",
         },
         {
-          name: "AutoCAD",
-          level: 75,
-          description: "Technical drawings, 2D designs",
-        },
-        {
-          name: "Altium Designer",
+          name: "Agile & Project Management",
           level: 85,
-          description: "PCB layout, component libraries",
+          description: "Scrum, Jira, Kanban, sprint planning",
         },
         {
-          name: "COMSOL",
-          level: 70,
-          description: "Multiphysics simulations, FEA analysis",
+          name: "Lab & Test Equipment",
+          level: 75,
+          description: "Oscilloscopes, multimeters, power supplies, analyzers",
+        },
+        {
+          name: "Communication",
+          level: 90,
+          description:
+            "Cross-disciplinary teamwork, presentations, stakeholder reports",
         },
       ],
     },
@@ -507,7 +547,7 @@ export function Skills() {
                 </div>
               </div>
               {/* Skills Legend */}
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
                 {skillCategories.map((category, idx) => (
                   <div key={idx} className="bg-neutral-light rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-2">
@@ -516,7 +556,7 @@ export function Skills() {
                           className: `w-5 h-5 text-${category.color}`,
                         })}
                       </span>
-                      <h5 className="font-medium">{category.name}</h5>
+                      <h5 className="font-medium mb-0">{category.name}</h5>
                     </div>
                     <ul className="text-sm text-neutral-dark">
                       {category.skills

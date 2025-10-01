@@ -4,28 +4,30 @@ import { CalendarIcon, MapPinIcon } from "lucide-react";
 export function Experience() {
   const experiences = [
     {
-      role: "Research Assistant",
-      company: "Medical Devices Innovation Lab",
-      location: "University of Technology",
-      period: "Jan 2023 - Present",
+      role: "Director of Electronics",
+      company:
+        "Biomedical Carleton Applied Research and Engineering Team (BioCARE)",
+      location: "Ottawa, ON",
+      period: "April 2025 - Present",
       description:
-        "Leading a team developing a novel biosensor for continuous glucose monitoring. Responsible for circuit design, signal processing algorithms, and prototype testing.",
+        "Led the design, development, and integration of electronic systems, ensuring reliability and performance in innovative projects. Oversaw circuit design, testing, and hardware implementation while mentoring team members and coordinating with other departments to deliver effective solutions.",
     },
     {
-      role: "Engineering Intern",
-      company: "BioTech Solutions",
-      location: "Boston, MA",
-      period: "May 2022 - Aug 2022",
+      role: "Computer Lab Support",
+      company: "Faculty of Engineering and Design",
+      location: "Carleton University",
+      period: "May 2025 - August 2025",
       description:
-        "Assisted in the development of a portable ECG device. Implemented signal filtering algorithms and contributed to the PCB design process.",
+        "Provided technical assistance and troubleshooting for hardware, software, and networking issues in the computer lab. Supported students and faculty with system setup, maintenance, and smooth operation of lab resources to ensure an efficient learning environment.",
     },
     {
-      role: "Undergraduate Researcher",
-      company: "Neural Engineering Lab",
-      location: "University of Technology",
-      period: "Sep 2021 - Dec 2022",
+      role: "Graphic Designer",
+      company:
+        "Humanitarian Organization of Latin American Students (H.O.L.A.S.)",
+      location: "Carleton University",
+      period: "August 2025 - Present",
       description:
-        "Conducted research on brain-computer interfaces. Processed EEG signals and developed machine learning models for pattern recognition.",
+        "Designed engaging visuals, promotional materials, and digital content to support events and initiatives. Focused on creating student-friendly, vibrant designs that strengthened community outreach and engagement.",
     },
   ];
   const containerVariants = {
@@ -106,7 +108,13 @@ export function Experience() {
                   {exp.role}
                 </h3>
                 <h4 className="font-medium text-neutral-dark">{exp.company}</h4>
-                <div className={`flex items-center gap-4 text-neutral-gray text-sm mt-3 ${index % 2 == 0 ? "justify-content-end" : "justify-content-start"} `}>
+                <div
+                  className={`flex items-center gap-4 text-neutral-gray text-sm mt-3 ${
+                    index % 2 == 0
+                      ? "justify-content-end"
+                      : "justify-content-start"
+                  } `}
+                >
                   <div className="flex items-center">
                     <CalendarIcon className="w-4 h-4 mr-1" />
                     <span>{exp.period}</span>

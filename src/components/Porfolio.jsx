@@ -8,19 +8,19 @@ export function Portfolio() {
       description:
         'Developed a machine learning algorithm to detect cardiac abnormalities from ECG signals with 94% accuracy.',
       image:
-        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        '/images/NeuroFit.svg',
       technologies: ['Python', 'TensorFlow', 'Signal Processing'],
-      github: '#',
+      github: 'https://github.com/JorgeRan/NeuroFit',
       demo: '#',
     },
     {
-      title: 'Wearable Health Monitor',
+      title: 'Pump Up!',
       description:
         'Designed and prototyped a low-power wearable device that tracks vital signs and transmits data wirelessly.',
-      image:
-        'https://images.unsplash.com/photo-1486649567693-aaa9b2e59385?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      technologies: ['Arduino', 'PCB Design', 'Bluetooth LE'],
-      github: '#',
+      image: '/images/PumpUp.svg',
+
+      technologies: ['Flutter, Firebase, Resful API'],
+      github: 'https://github.com/JorgeRan/fitness_app',
       demo: '#',
     },
     {

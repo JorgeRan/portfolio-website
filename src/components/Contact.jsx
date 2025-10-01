@@ -1,7 +1,7 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { MailIcon, LinkedinIcon, GithubIcon, PhoneIcon } from 'lucide-react'
-import { Button } from './common/Button'
+import React from "react";
+import { motion } from "framer-motion";
+import { MailIcon, LinkedinIcon, GithubIcon, PhoneIcon } from "lucide-react";
+import { Button } from "./common/Button";
 export function Contact() {
   return (
     <section id="contact" className="py-20 bg-white">
@@ -53,26 +53,26 @@ export function Contact() {
             </p>
             <div className="space-y-4">
               <a
-                href="mailto:jane.doe@example.com"
+                href="mailto:jorge.rangeldelatejera@gmail.com"
                 className="flex items-center group"
               >
                 <div className="p-3 bg-primary-teal/10 rounded-full mr-4 group-hover:bg-primary-teal/20 transition-colors">
                   <MailIcon className="w-6 h-6 text-primary-teal" />
                 </div>
                 <span className="text-neutral-dark group-hover:text-primary-teal transition-colors">
-                  jane.doe@example.com
+                  jorge.rangeldelatejera@gmail.com
                 </span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center group">
+              <a href="sms:+13435726402" className="flex items-center group">
                 <div className="p-3 bg-primary-blue/10 rounded-full mr-4 group-hover:bg-primary-blue/20 transition-colors">
                   <PhoneIcon className="w-6 h-6 text-primary-blue" />
                 </div>
                 <span className="text-neutral-dark group-hover:text-primary-blue transition-colors">
-                  (123) 456-7890
+                  (343) 572-6402
                 </span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/jorgerangel-t/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center group"
@@ -81,11 +81,11 @@ export function Contact() {
                   <LinkedinIcon className="w-6 h-6 text-[#0077B5]" />
                 </div>
                 <span className="text-neutral-dark group-hover:text-[#0077B5] transition-colors">
-                  linkedin.com/in/janedoe
+                  linkedin.com/in/jorgerangel-t
                 </span>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/JorgeRan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center group"
@@ -94,7 +94,7 @@ export function Contact() {
                   <GithubIcon className="w-6 h-6 text-neutral-dark" />
                 </div>
                 <span className="text-neutral-dark group-hover:text-neutral-dark/70 transition-colors">
-                  github.com/janedoe
+                  github.com/JorgeRan
                 </span>
               </a>
             </div>
@@ -119,7 +119,12 @@ export function Contact() {
             <h3 className="text-2xl font-bold mb-6 text-primary-blue">
               Send a Message
             </h3>
-            <form className="space-y-4">
+            <form
+              className="space-y-4"
+              method="POST"
+              name="contact_form"
+              action="https://formspree.io/f/xyznewjd"
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -143,6 +148,7 @@ export function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="_replyto"
                   id="email"
                   className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
                   placeholder="your.email@example.com"
@@ -157,18 +163,21 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
                   placeholder="Your message..."
                 ></textarea>
               </div>
-              <Button className="w-full">Send Message</Button>
+              <Button type="submit" className="w-full">
+                Send Message
+              </Button>
             </form>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Contact;

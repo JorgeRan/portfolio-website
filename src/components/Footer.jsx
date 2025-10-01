@@ -19,9 +19,9 @@ export function Footer() {
               duration: 0.5,
             }}
           >
-            <p className="text-lg font-bold">Jane Doe</p>
+            <p className="text-lg font-bold mb-2 mt-3">Jorge Rangel</p>
             <p className="text-sm text-white/70">
-              Biomedical & Electrical Engineering Student
+              Biomedical Engineer & Full Stack Developer
             </p>
           </motion.div>
           <motion.div

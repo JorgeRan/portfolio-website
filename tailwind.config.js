@@ -11,14 +11,18 @@ export default {
         primary: {
           teal: "#00BFA6",
           blue: "#004E89",
+          
         },
         neutral: {
           light: "#F7F7F7",
           white: "#FFFFFF",
           gray: "#B0B0B0",
           dark: "#333333",
+          
         },
+        magenta: '#4CAF50',
         accent: "#FFC107",
+        red: "#df6565ff"
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

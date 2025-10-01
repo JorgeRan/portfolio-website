@@ -2,9 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   GraduationCapIcon,
+  PencilRulerIcon,
   BriefcaseIcon,
   CodeIcon,
+  BrainIcon,
   MicroscopeIcon,
+  CpuIcon,
 } from "lucide-react";
 export function About() {
   const fadeInUp = {
@@ -60,12 +63,13 @@ export function About() {
             <h3 className="text-2xl font-bold mb-4 text-primary-blue">Bio</h3>
             <p className="text-neutral-dark mb-6 leading-relaxed">
               I’m a Biomedical and Electrical Engineering student and Full Stack
-              Developer passionate about creating innovative technologies at the
-              intersection of healthcare and software. My work focuses on
-              integrating AI with medical devices to improve patient outcomes
-              and accessibility. I thrive in collaborative environments and
-              enjoy turning complex challenges into practical, user-friendly
-              solutions.
+              Developer passionate about creating innovative solutions at the
+              intersection of healthcare and technology. My work spans from
+              circuit design and embedded systems to building responsive,
+              data-driven web applications with modern frameworks. I thrive in
+              collaborative environments and enjoy integrating engineering and
+              software to tackle complex challenges, turning them into practical
+              tools that improve accessibility and outcomes.
             </p>
             <div className="flex items-center mb-6">
               <div className="mr-4">
@@ -91,7 +95,9 @@ export function About() {
               </div>
               <div>
                 <h4 className="font-bold">Current Role</h4>
-                <p className="text-neutral-dark my-1">Director Of Electronics</p>
+                <p className="text-neutral-dark my-1">
+                  Director Of Electronics
+                </p>
                 <p className="text-neutral-gray">
                   Biomedical Carleton Applied Research and Engineering Team{" "}
                 </p>
@@ -127,7 +133,7 @@ export function About() {
               <div>
                 <div className="flex items-center mb-2">
                   <CodeIcon className="w-5 h-5 text-primary-teal mr-2" />
-                  <h4 className="font-bold my-0">Programming</h4>
+                  <h4 className="font-bold my-0">Software Development</h4>
                 </div>
                 <div className="w-full bg-neutral-gray/20 rounded-full h-3">
                   <motion.div
@@ -148,66 +154,23 @@ export function About() {
                   ></motion.div>
                 </div>
                 <div className="flex justify-between text-xs mt-1">
-                  <span>Python, MATLAB, C++</span>
+                  <span>
+                    Python, C/C++, MATLAB, JavaScript/TypeScript, React, Node.js
+                  </span>
                   <span>85%</span>
                 </div>
               </div>
               <div>
                 <div className="flex items-center mb-2">
-                  <MicroscopeIcon className="w-5 h-5 text-primary-blue mr-2" />
-                  <h4 className="font-bold my-0">Medical Imaging</h4>
+                  <CpuIcon className="w-5 h-5 text-primary-blue mr-2" />
+
+                  <h4 className="font-bold my-0">
+                    Electronics & Embedded Systems
+                  </h4>
                 </div>
                 <div className="w-full bg-neutral-gray/20 rounded-full h-3">
                   <motion.div
                     className="bg-primary-blue h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "75%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.8,
-                    }}
-                  ></motion.div>
-                </div>
-                <div className="flex justify-between text-xs mt-1">
-                  <span>MRI, CT, Signal Processing</span>
-                  <span>75%</span>
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center mb-2">
-                  <div className="w-5 h-5 flex items-center justify-center text-accent mr-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2v8"></path>
-                      <path d="m4.93 10.93 1.41 1.41"></path>
-                      <path d="M2 18h2"></path>
-                      <path d="M20 18h2"></path>
-                      <path d="m19.07 10.93-1.41 1.41"></path>
-                      <path d="M22 22H2"></path>
-                      <path d="m8 22 4-10 4 10"></path>
-                    </svg>
-                  </div>
-                  <h4 className="font-bold my-0">Circuit Design</h4>
-                </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-accent h-3 rounded-full"
                     initial={{
                       width: 0,
                     }}
@@ -224,8 +187,97 @@ export function About() {
                   ></motion.div>
                 </div>
                 <div className="flex justify-between text-xs mt-1">
-                  <span>PCB, Analog, Digital</span>
+                  <span>Circuit Design, PCB, VHDL/Verilog, Arduino/STM32</span>
                   <span>90%</span>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center mb-2">
+                  <BrainIcon className="w-5 h-5 text-accent mr-2" />
+                  <h4 className="font-bold my-0">Data Science & Engineering</h4>
+                </div>
+                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
+                  <motion.div
+                    className="bg-accent h-3 rounded-full"
+                    initial={{
+                      width: 0,
+                    }}
+                    whileInView={{
+                      width: "85%",
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      duration: 1,
+                      delay: 0.6,
+                    }}
+                  ></motion.div>
+                </div>
+                <div className="flex justify-between text-xs mt-1">
+                  <span>
+                    SQL, ETL, Azure, Databricks, Machine Learning basics
+                  </span>
+                  <span>85%</span>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center mb-2">
+                  <MicroscopeIcon className="w-5 h-5 text-magenta mr-2" />
+                  <h4 className="font-bold my-0">Biomedical & Lab Skills</h4>
+                </div>
+                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
+                  <motion.div
+                    className="bg-magenta h-3 rounded-full"
+                    initial={{
+                      width: 0,
+                    }}
+                    whileInView={{
+                      width: "75%",
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      duration: 1,
+                      delay: 0.8,
+                    }}
+                  ></motion.div>
+                </div>
+                <div className="flex justify-between text-xs mt-1">
+                  <span>
+                    Medical Imaging, ECG/EMG/EEG analysis, Signal Processing
+                  </span>
+                  <span>75%</span>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center mb-2">
+                  <PencilRulerIcon className="w-5 h-5 text-red mr-2" />
+                  <h4 className="font-bold my-0">Collaboration & Tools</h4>
+                </div>
+                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
+                  <motion.div
+                    className="bg-red h-3 rounded-full"
+                    initial={{
+                      width: 0,
+                    }}
+                    whileInView={{
+                      width: "80%",
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      duration: 1,
+                      delay: 1,
+                    }}
+                  ></motion.div>
+                </div>
+                <div className="flex justify-between text-xs mt-1">
+                  <span>Git, Jira, Agile, CI/CD, cloud platforms</span>
+                  <span>80%</span>
                 </div>
               </div>
             </div>

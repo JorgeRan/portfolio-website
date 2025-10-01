@@ -4,8 +4,10 @@ import {
   CodeIcon,
   BrainIcon,
   PencilRulerIcon,
-  BarChartIcon,
-  LayoutGridIcon,
+  LayoutGrid,
+  BarChart3,
+  
+  CpuIcon,
 } from "lucide-react";
 import {
   Radar,
@@ -19,7 +21,7 @@ import {
 export function Skills() {
   const [activeTab, setActiveTab] = useState("cards");
   const [activeCategory, setActiveCategory] = useState(0);
-  const [flippedCard, setFlippedCard] = useState(null); // ✅ removed TypeScript types
+  const [flippedCard, setFlippedCard] = useState(null);
 
   const skillCategories = [
     {
@@ -51,7 +53,7 @@ export function Skills() {
     },
     {
       name: "Hardware",
-      icon: <div className="w-6 h-6" />,
+      icon: <CpuIcon className="w-6 h-6" />,
       color: "primary-blue",
       skills: [
         {
@@ -106,7 +108,7 @@ export function Skills() {
     {
       name: "Design Tools",
       icon: <PencilRulerIcon className="w-6 h-6" />,
-      color: "neutral-dark",
+      color: "red",
       skills: [
         {
           name: "SolidWorks",
@@ -213,47 +215,40 @@ export function Skills() {
             delay: 0.1,
           }}
         >
-          My technical toolkit combines biomedical engineering expertise with
-          software development skills, enabling me to build innovative
-          healthcare solutions across hardware and software domains.
+          I bring together biomedical knowledge and software development
+          expertise to create solutions that merge health and technology. My
+          skills span from building web and mobile applications to working with
+          hardware systems, giving me the flexibility to develop innovative
+          projects across multiple domains.
         </motion.p>
         {/* Visualization Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-full shadow-soft p-1 inline-flex align-items-center ">
+          <div className="bg-white rounded-full shadow p-1 inline-flex">
             <motion.button
-              className={`flex items-center px-5 py-2 rounded-full my-0 ${
+              className={`flex items-center px-5 py-2 rounded-full ${
                 activeTab === "cards"
-                  ? "bg-primary-teal text-white"
-                  : "text-neutral-dark"
+                  ? "bg-teal-500 text-white"
+                  : "text-gray-700"
               }`}
               onClick={() => setActiveTab("cards")}
-              variants={tabVariants}
-              animate={activeTab === "cards" ? "active" : "inactive"}
-              transition={{
-                duration: 0.3,
-              }}
             >
-              <LayoutGridIcon className="w-4 h-4 mr-2 " />
+              <LayoutGrid className="w-4 h-4 mr-2" />
               Skill Cards
             </motion.button>
             <motion.button
-              className={`flex items-center px-5 py-2  rounded-full ${
+              className={`flex items-center px-5 py-2 rounded-full ${
                 activeTab === "radar"
                   ? "bg-primary-blue text-white"
-                  : "text-neutral-dark"
+                  : "text-gray-700"
               }`}
               onClick={() => setActiveTab("radar")}
-              variants={tabVariants}
-              animate={activeTab === "radar" ? "active" : "inactive"}
-              transition={{
-                duration: 0.3,
-              }}
             >
-              <BarChartIcon className="w-4 h-4 mr-2" />
+              <BarChart3 className="w-4 h-4 mr-2" />
               Skill Map
             </motion.button>
           </div>
         </div>
+
         <AnimatePresence mode="wait">
           {activeTab === "cards" && (
             <motion.div

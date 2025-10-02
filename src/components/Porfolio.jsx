@@ -1,59 +1,54 @@
-import React, { Children } from 'react'
-import { motion } from 'framer-motion'
-import { GithubIcon, ExternalLinkIcon } from 'lucide-react'
+import React, { Children } from "react";
+import { motion } from "framer-motion";
+import { GithubIcon, ExternalLinkIcon } from "lucide-react";
 export function Portfolio() {
   const projects = [
-    
     {
-      title: 'BioCARE: Biomedical Carleton Applied Research & Engineering Team',
+      title: "BioCARE: Biomedical Carleton Applied Research & Engineering Team",
       description:
-        'Led electronics design and prototyping at BioCARE, developing biomedical devices that integrate hardware, microcontrollers, and real-time data systems.',
-      image:
-        '/images/BioCARE.png',
-      technologies: ['C++', 'Signal Processing', '3D Printing'],
-      github: 'https://github.com/BioCARE-Software',
-      demo: 'https://carleton-biocare.ca/',
+        "Led electronics design and prototyping at BioCARE, developing biomedical devices that integrate hardware, microcontrollers, and real-time data systems.",
+      image: "images/BioCARE.png",
+      technologies: ["C++", "Signal Processing", "3D Printing"],
+      github: "https://github.com/BioCARE-Software",
+      demo: "https://carleton-biocare.ca/",
     },
     {
-      title: 'NeuroFit',
+      title: "NeuroFit",
       description:
-        'NeuroFit makes fitness personal with muscle-based exercise selection and AI-ready features.',
-      image:
-        '/images/NeuroFit.svg',
-      technologies: ['Python', 'TensorFlow', 'Signal Processing'],
-      github: 'https://github.com/JorgeRan/NeuroFit',
-      demo: '',
+        "NeuroFit makes fitness personal with muscle-based exercise selection and AI-ready features.",
+      image: "images/NeuroFit.svg",
+      technologies: ["Python", "TensorFlow", "Signal Processing"],
+      github: "https://github.com/JorgeRan/NeuroFit",
+      demo: "",
     },
     {
-      title: 'Pump Up!',
+      title: "Pump Up!",
       description:
-        'A fitness app that lets users build personalized workout routines, explore exercise guides, and track progress, all powered by Flutter and Firebase.',
-      image: '/images/PumpUp.svg',
+        "A fitness app that lets users build personalized workout routines, explore exercise guides, and track progress, all powered by Flutter and Firebase.",
+      image: "images/PumpUp.svg",
 
-      technologies: ['Flutter, Firebase, Resful API'],
-      github: 'https://github.com/JorgeRan/fitness_app',
-      demo: '',
+      technologies: ["Flutter, Firebase, Resful API"],
+      github: "https://github.com/JorgeRan/fitness_app",
+      demo: "",
     },
     {
-      title: 'Visited Contries Website',
+      title: "Visited Contries Website",
       description:
-        'A web app that lets users track and share the countries they’ve visited through a personalized interactive map.',
-      image:
-        '/images/visited_contries.png',
-      technologies: ['MATLAB', 'Image Processing', 'Deep Learning'],
-      github: 'https://github.com/JorgeRan/Visited-Countries',
+        "A web app that lets users track and share the countries they’ve visited through a personalized interactive map.",
+      image: "images/visited_contries.png",
+      technologies: ["MATLAB", "Image Processing", "Deep Learning"],
+      github: "https://github.com/JorgeRan/Visited-Countries",
     },
     {
-      title: 'Blog API Project',
+      title: "Blog API Project",
       description:
-        'A blogging platform powered by a custom-built API, enabling seamless content creation, management, and display with a modern interface.',
-      image:
-        '/images/blog_api.png',
-      technologies: ['C++', 'Signal Processing', '3D Printing'],
-      github: 'https://github.com/JorgeRan/Blog-API-Project',
-      demo: '',
+        "A blogging platform powered by a custom-built API, enabling seamless content creation, management, and display with a modern interface.",
+      image: "images/blog_api.png",
+      technologies: ["C++", "Signal Processing", "3D Printing"],
+      github: "https://github.com/JorgeRan/Blog-API-Project",
+      demo: "",
     },
-  ]
+  ];
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -64,7 +59,7 @@ export function Portfolio() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
   const itemVariants = {
     hidden: {
       opacity: 0,
@@ -77,7 +72,7 @@ export function Portfolio() {
         duration: 0.5,
       },
     },
-  }
+  };
   return (
     <section id="portfolio" className="py-20 bg-neutral-light">
       <div className="container mx-auto px-4">
@@ -167,8 +162,7 @@ export function Portfolio() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
 
 export default Portfolio;

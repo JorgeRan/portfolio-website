@@ -122,11 +122,11 @@ export function Hero() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/20 p-2">
               <div className="w-full h-full rounded-full overflow-hidden">
-                {/* <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                { <img
+                  src="images/avatar.svg"
                   alt="Professional portrait"
                   className="w-full h-full object-cover"
-                /> */}
+                /> }
               </div>
             </div>
           </motion.div>

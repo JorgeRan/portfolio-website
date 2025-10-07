@@ -129,35 +129,18 @@ export function About() {
             <h3 className="text-2xl font-bold mb-4 text-primary-blue">
               Key Skills
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-6 flex-col d-flex justify-content-between">
               <div>
                 <div className="flex items-center mb-2">
                   <CodeIcon className="w-5 h-5 text-primary-teal mr-2" />
                   <h4 className="font-bold my-0">Software Development</h4>
                 </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-primary-teal h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "85%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.6,
-                    }}
-                  ></motion.div>
-                </div>
+                
                 <div className="flex justify-between text-xs mt-1">
                   <span>
                     Python, C/C++, MATLAB, JavaScript/TypeScript, React, Node.js
                   </span>
-                  <span>85%</span>
+                  
                 </div>
               </div>
               <div>
@@ -168,27 +151,9 @@ export function About() {
                     Electronics & Embedded Systems
                   </h4>
                 </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-primary-blue h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "90%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 1,
-                    }}
-                  ></motion.div>
-                </div>
+                
                 <div className="flex justify-between text-xs mt-1">
                   <span>Circuit Design, PCB, VHDL/Verilog, Arduino/STM32</span>
-                  <span>90%</span>
                 </div>
               </div>
               <div>
@@ -196,29 +161,11 @@ export function About() {
                   <BrainIcon className="w-5 h-5 text-accent mr-2" />
                   <h4 className="font-bold my-0">Data Science & Engineering</h4>
                 </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-accent h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "85%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.6,
-                    }}
-                  ></motion.div>
-                </div>
+                
                 <div className="flex justify-between text-xs mt-1">
                   <span>
                     SQL, ETL, Azure, Databricks, Machine Learning basics
                   </span>
-                  <span>85%</span>
                 </div>
               </div>
               <div>
@@ -226,29 +173,11 @@ export function About() {
                   <MicroscopeIcon className="w-5 h-5 text-magenta mr-2" />
                   <h4 className="font-bold my-0">Biomedical & Lab Skills</h4>
                 </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-magenta h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "75%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.8,
-                    }}
-                  ></motion.div>
-                </div>
+                
                 <div className="flex justify-between text-xs mt-1">
                   <span>
                     Medical Imaging, ECG/EMG/EEG analysis, Signal Processing
                   </span>
-                  <span>75%</span>
                 </div>
               </div>
 
@@ -257,27 +186,9 @@ export function About() {
                   <PencilRulerIcon className="w-5 h-5 text-red mr-2" />
                   <h4 className="font-bold my-0">Collaboration & Tools</h4>
                 </div>
-                <div className="w-full bg-neutral-gray/20 rounded-full h-3">
-                  <motion.div
-                    className="bg-red h-3 rounded-full"
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "80%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 1,
-                    }}
-                  ></motion.div>
-                </div>
+                
                 <div className="flex justify-between text-xs mt-1">
                   <span>Git, Jira, Agile, CI/CD, cloud platforms</span>
-                  <span>80%</span>
                 </div>
               </div>
             </div>

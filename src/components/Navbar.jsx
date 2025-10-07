@@ -35,7 +35,11 @@ export function Navbar() {
           }}
         >
           <span className={scrolled ? "text-primary-blue" : "text-white"}>
-            Portfolio
+            { <img
+                  src="images/logo.png"
+                  alt="logo"
+                  className="w-10 h-10 object-cover"
+                /> }
           </span>
         </motion.div>
         <nav>
@@ -51,9 +55,10 @@ export function Navbar() {
                 >
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className={`transition-colors nav-link ${
+                    style={{textDecoration: 'none'}}
+                    className={`transition-colors hover:text-primary-teal text-decoration:none ${
                       scrolled ? "text-neutral-dark" : "text-white"
-                    } hover:text-primary-teal`}
+                    } `}
                   >
                     {item}
                   </a>

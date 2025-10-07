@@ -97,7 +97,7 @@ export function Experience() {
               variants={itemVariants}
             >
               <div
-                className={`absolute  w-4 h-4 rounded-full bg-primary-teal border-4 border-white transform ${
+                className={`absolute  w-5 h-5 rounded-full bg-primary-teal border-4 border-white transform ${
                   index % 2 === 0
                     ? "md:translate-x-[50%] md:translate-y-[700%] md:right-0"
                     : "md:translate-x-[-50%] md:translate-y-[700%] md:left-0"

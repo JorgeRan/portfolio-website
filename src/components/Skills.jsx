@@ -38,9 +38,9 @@ export function Skills() {
             "Data analysis, ML/AI, automation scripts, visualization",
         },
         {
-          name: "MATLAB",
-          level: 85,
-          description: "Signal processing, simulations, control systems",
+          name: "Java",
+          level: 70,
+          description: "Object-oriented programming, backend systems",
         },
         {
           name: "C/C++",
@@ -52,10 +52,17 @@ export function Skills() {
           level: 80,
           description: "Full-stack development with React, Next.js, Node.js",
         },
+        
         {
-          name: "Java",
-          level: 70,
-          description: "Object-oriented programming, backend systems",
+          name: "Flutter/Dart",
+          level: 85,
+          description:
+            "Cross-platform mobile development for iOS and Android",
+        },
+        {
+          name: "MATLAB",
+          level: 85,
+          description: "Signal processing, simulations, control systems",
         },
       ],
     },
@@ -174,7 +181,6 @@ export function Skills() {
     },
   ];
 
-  // Format data for radar chart
   const radarData = skillCategories.map((category) => {
     const avgSkill =
       category.skills.reduce((sum, skill) => sum + skill.level, 0) /
@@ -182,7 +188,6 @@ export function Skills() {
     return { subject: category.name, A: avgSkill, fullMark: 100 };
   });
 
-  // Detailed radar data (all skills)
   const detailedRadarData = [];
   skillCategories.forEach((category) => {
     category.skills.forEach((skill) => {
@@ -375,34 +380,8 @@ export function Skills() {
                           <h3 className="text-xl font-bold mb-2 text-neutral-dark">
                             {skill.name}
                           </h3>
-                          <div className="mt-4 mb-2 flex justify-between items-center">
-                            <span className="text-sm text-neutral-gray">
-                              Proficiency
-                            </span>
-                            <span
-                              className={`text-sm font-medium text-${skillCategories[activeCategory].color}`}
-                            >
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <div className="w-full bg-neutral-gray/20 rounded-full h-2">
-                            <motion.div
-                              className={`h-2 rounded-full bg-${skillCategories[activeCategory].color}`}
-                              initial={{
-                                width: 0,
-                              }}
-                              whileInView={{
-                                width: `${skill.level}%`,
-                              }}
-                              viewport={{
-                                once: true,
-                              }}
-                              transition={{
-                                duration: 1,
-                                delay: 0.2,
-                              }}
-                            />
-                          </div>
+                          
+                          
                         </div>
                         <div className="text-sm text-neutral-gray mt-4">
                           Click for details
@@ -427,9 +406,9 @@ export function Skills() {
                           <h3 className="text-xl font-bold mb-4">
                             {skill.name}
                           </h3>
-                          <p className="text-white/90">{skill.description}</p>
+                          <p className="text-white/90 mb-0">{skill.description}</p>
                         </div>
-                        <div className="text-sm text-white/80 mt-4">
+                        <div className="text-sm text-white/80 mt-0">
                           Click to flip back
                         </div>
                       </div>
@@ -564,9 +543,7 @@ export function Skills() {
                         .map((skill, i) => (
                           <li key={i} className="flex justify-between">
                             <span>{skill.name}</span>
-                            <span className={`text-${category.color}`}>
-                              {skill.level}%
-                            </span>
+                            
                           </li>
                         ))}
                     </ul>

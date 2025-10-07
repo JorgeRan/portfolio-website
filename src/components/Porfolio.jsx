@@ -8,7 +8,7 @@ export function Portfolio() {
       description:
         "Led electronics design and prototyping at BioCARE, developing biomedical devices that integrate hardware, microcontrollers, and real-time data systems.",
       image: "images/BioCARE.png",
-      technologies: ["C++", "Signal Processing", "3D Printing"],
+      technologies: ["Microcontrollers", "Signal Processing", "Circuit Design"],
       github: "https://github.com/BioCARE-Software",
       demo: "https://carleton-biocare.ca/",
     },
@@ -17,7 +17,7 @@ export function Portfolio() {
       description:
         "NeuroFit makes fitness personal with muscle-based exercise selection and AI-ready features.",
       image: "images/NeuroFit.svg",
-      technologies: ["Python", "TensorFlow", "Signal Processing"],
+      technologies: ["Flutter", "SQL", "Machine Learning"],
       github: "https://github.com/JorgeRan/NeuroFit",
       demo: "",
     },
@@ -27,7 +27,7 @@ export function Portfolio() {
         "A fitness app that lets users build personalized workout routines, explore exercise guides, and track progress, all powered by Flutter and Firebase.",
       image: "images/PumpUp.svg",
 
-      technologies: ["Flutter, Firebase, Resful API"],
+      technologies: ["Flutter", "Firebase", "Rest API"],
       github: "https://github.com/JorgeRan/fitness_app",
       demo: "",
     },
@@ -36,7 +36,7 @@ export function Portfolio() {
       description:
         "A web app that lets users track and share the countries they’ve visited through a personalized interactive map.",
       image: "images/visited_contries.png",
-      technologies: ["MATLAB", "Image Processing", "Deep Learning"],
+      technologies: ["JavaScript", "SQL", "Rest API"],
       github: "https://github.com/JorgeRan/Visited-Countries",
     },
     {
@@ -44,7 +44,7 @@ export function Portfolio() {
       description:
         "A blogging platform powered by a custom-built API, enabling seamless content creation, management, and display with a modern interface.",
       image: "images/blog_api.png",
-      technologies: ["C++", "Signal Processing", "3D Printing"],
+      technologies: ["JavaScript", "Rest API", "Node.js"],
       github: "https://github.com/JorgeRan/Blog-API-Project",
       demo: "",
     },
@@ -116,7 +116,7 @@ export function Portfolio() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 w-full">
                     <h3 className="text-xl font-bold text-white">
                       {project.title}

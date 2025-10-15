@@ -4,9 +4,7 @@ import {
   CodeIcon,
   BrainIcon,
   PencilRulerIcon,
-  DatabaseIcon,
   MicroscopeIcon,
-  UsersIcon,
   LayoutGrid,
   BarChart3,
   CpuIcon,
@@ -210,10 +208,7 @@ export function Skills() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const tabVariants = {
-    inactive: { opacity: 0.7, scale: 0.95, y: 0 },
-    active: { opacity: 1, scale: 1, y: -5 },
-  };
+  
 
   const handleFlip = (index) => {
     if (flippedCard === index) setFlippedCard(null);

@@ -158,7 +158,7 @@ export function About() {
               </div>
               <div>
                 <div className="flex items-center mb-2">
-                  <BrainIcon className="w-5 h-5 text-accent mr-2" />
+                  <BrainIcon className="w-5 h-5 text-yellow mr-2" />
                   <h4 className="font-bold my-0">Data Science & Engineering</h4>
                 </div>
                 

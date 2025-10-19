@@ -21,7 +21,7 @@ export default {
           
         },
         magenta: '#4CAF50',
-        accent: "#FFC107",
+        yellow: "#FFC107",
         red: "#df6565ff"
       },
       fontFamily: {

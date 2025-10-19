@@ -96,7 +96,7 @@ export function Skills() {
     {
       name: "Data Science & Engineering",
       icon: <BrainIcon className="w-6 h-6" />,
-      color: "accent",
+      color: "yellow",
       skills: [
         {
           name: "Data Analysis",
@@ -261,7 +261,6 @@ export function Skills() {
           hardware systems, giving me the flexibility to develop innovative
           projects across multiple domains.
         </motion.p>
-        {/* Visualization Toggle */}
         <div className="flex justify-center mb-12">
           <div className="bg-white rounded-full shadow p-1 inline-flex">
             <motion.button

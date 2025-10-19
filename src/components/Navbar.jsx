@@ -99,7 +99,7 @@ export function Navbar() {
 
               <motion.li whileHover={{ scale: 1.1 }}>
                 <a
-                  href="/files/Jorge_Rangel_CV_Hybrid.pdf"
+                  href="files/Jorge_Rangel_CV_Hybrid.pdf"
                   download="JorgeRangel_CV.pdf"
                   className="bg-black text-white font-semibold no-underline px-4 py-2 rounded-lg hover:bg-primary-blue transition-colors"
                 >

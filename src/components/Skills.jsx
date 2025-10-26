@@ -352,7 +352,7 @@ export function Skills() {
                 {skillCategories[activeCategory].skills.map((skill, idx) => (
                   <motion.div
                     key={idx}
-                    className="relative h-64 perspective-1000 cursor-pointer"
+                    className="relative h-64 cursor-pointer"
                     variants={itemVariants}
                     onClick={() => handleFlip(idx)}
                   >

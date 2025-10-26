@@ -1,47 +1,76 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { MailIcon, LinkedinIcon, GithubIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 import { Button } from "./common/Button";
 export function Contact() {
+  const [status, setStatus] = useState(null); // "success", "error", "loading", or null
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      setStatus("error");
+    }
+
+    setTimeout(() => setStatus(null), 5000);
+  };
+
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white relative">
+      {status && (
+        <div
+          className={`fixed bottom-5 right-5 px-4 py-3 rounded-xl shadow-lg text-white transition-all duration-300 ${
+            status === "success"
+              ? "bg-primary-teal"
+              : status === "error"
+              ? "bg-red-500"
+              : "bg-neutral-dark"
+          }`}
+        >
+          {status === "loading"
+            ? "⏳ Sending..."
+            : status === "success"
+            ? "✅ Message sent successfully!"
+            : "❌ Something went wrong. Please try again."}
+        </div>
+      )}
+
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-16 text-neutral-dark"
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           Contact Me
         </motion.h2>
+
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
             className="bg-neutral-light p-8 rounded-xl shadow-soft"
-            initial={{
-              opacity: 0,
-              x: -20,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-6 text-primary-blue">
               Get In Touch
@@ -99,30 +128,22 @@ export function Contact() {
               </a>
             </div>
           </motion.div>
+
           <motion.div
             className="bg-neutral-light p-8 rounded-xl shadow-soft"
-            initial={{
-              opacity: 0,
-              x: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-6 text-primary-blue">
               Send a Message
             </h3>
             <form
+              id="contact_form"
               className="space-y-4"
               method="POST"
-              name="contact_form"
+              onSubmit={handleSubmit}
               action="https://formspree.io/f/xyznewjd"
             >
               <div>
@@ -135,8 +156,10 @@ export function Contact() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
                   placeholder="Your name"
+                  required
                 />
               </div>
               <div>
@@ -152,6 +175,7 @@ export function Contact() {
                   id="email"
                   className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
                   placeholder="your.email@example.com"
+                  required
                 />
               </div>
               <div>
@@ -167,10 +191,11 @@ export function Contact() {
                   rows={4}
                   className="w-full px-4 py-2 border border-neutral-gray/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal"
                   placeholder="Your message..."
+                  required
                 ></textarea>
               </div>
               <Button type="submit" className="w-full">
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </motion.div>

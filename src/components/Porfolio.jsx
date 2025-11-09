@@ -4,6 +4,16 @@ import { GithubIcon, ExternalLinkIcon } from "lucide-react";
 export function Portfolio() {
   const projects = [
     {
+      title: "VERDICOM Pro: Medical Image Visualizer",
+      description:
+        "Built a simple DICOM visualizer that enables users to view and explore medical imaging files with an intuitive interface.",
+      image: "images/VERDICOM.png",
+      technologies: ["Python", "Streamlit", "DICOM", "Medical Imaging"],
+      github: "https://github.com/JorgeRan/verdicom-pro",
+      demo: "",
+    },
+
+    {
       title: "BioCARE: Biomedical Carleton Applied Research & Engineering Team",
       description:
         "Led electronics design and prototyping at BioCARE, developing biomedical devices that integrate hardware, microcontrollers, and real-time data systems.",

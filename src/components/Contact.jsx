@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MailIcon, PhoneIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 import { Button } from "./common/Button";
 export function Contact() {
-  const [status, setStatus] = useState(null); // "success", "error", "loading", or null
+  const [status, setStatus] = useState(null); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
